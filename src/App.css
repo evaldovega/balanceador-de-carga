@@ -1,0 +1,207 @@
+/* Layout Principal en 3 Columnas */
+.layout-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f0eee6; /* Fondo claro general */
+  color: #212529;            /* Texto principal oscuro */
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Paneles Laterales Generales */
+.control-panel {
+  width: 300px;
+  min-width: 300px;
+  height: 100%;
+  background-color: #ffffff;  /* Fondo blanco puro para paneles */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 10;
+}
+
+/* Panel Izquierdo */
+.panel-left {
+  border-right: 1px solid #e9ecef;
+}
+
+/* Panel Derecho */
+.panel-right {
+  width: 400px;
+  min-width: 400px;
+  border-left: 1px solid #e9ecef;
+}
+
+.control-panel h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #5c5f77; /* Púrpura suave / gris azulado */
+}
+
+.control-panel h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  color: #1e66f5; /* Azul vivo para subtítulos */
+}
+
+.panel-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #e9ecef;
+  margin: 4px 0;
+}
+
+/* Campos de entrada */
+.control-panel input {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  color: #212529;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.control-panel input:focus {
+  border-color: #1e66f5;
+  box-shadow: 0 0 0 2px rgba(30, 102, 245, 0.15);
+}
+
+/* Tarjetas de Métricas (Panel Derecho) */
+.metric-card {
+  background-color: #f1f3f5;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-card.highlight {
+  border-color: #40a02b;
+  background-color: rgba(64, 160, 43, 0.08);
+}
+
+.metric-title {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #40a02b; /* Verde oscuro para visibilidad */
+}
+
+/* Lista de Distribución */
+.distribution-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.distribution-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1f3f5;
+  border: 1px solid #e9ecef;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #343a40;
+}
+
+/* Lista de Servidores */
+.servers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.server-item {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.server-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.server-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #343a40;
+}
+
+.capacity-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.capacity-input-group input {
+  width: 80px;
+}
+
+/* Botones */
+.btn-delete {
+  background: transparent;
+  border: none;
+  color: #d20f39; /* Rojo claro / Coral */
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: rgba(210, 15, 57, 0.1);
+}
+
+.btn-add {
+  background-color: #40a02b;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #2b6f1e;
+}
+
+/* Contenedor central del Diagrama */
+.diagram-container {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  position: relative;
+  background-color: #f8f9fa;
+}
